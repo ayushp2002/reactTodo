@@ -1,0 +1,225 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dbdbdb;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+.root {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    cursor: pointer;
+}
+.content {
+    width: 75vw;
+    height: 90vh;
+    border-radius: 30px;
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+h1 {
+    color: #eeeeee;
+}
+.actions {
+    background-color: #555555;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+}
+.todo-list {
+    background-color: #555555;
+    width: 93%;
+    height: 70%;
+    overflow-y: scroll;
+    padding: 0px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.todo-list::-webkit-scrollbar-thumb {
+    background-color: #333333;
+    border: 4px solid transparent;
+    border-radius: 15px;
+    background-clip: padding-box;  
+}
+.todo-list::-webkit-scrollbar {
+    width: 19px;
+}
+.inputs {
+    display: flex;
+}
+label {
+    font-size: 0.9rem;
+    color: #eeeeee;
+}
+.input {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+}
+.input input {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: #222222;
+    border: solid 1px #FD9704;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 5px;
+    outline: none;
+    background-color: #eeeeee;
+}
+button#add-task {
+    height: 65%;
+    border-radius: 20px;
+    border: solid 1px #FD9704;
+    color: #eeeeee;
+    background-color: #FD9704;
+}
+button#add-task:hover {
+    background-color: #e48500;
+}
+.todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: solid 1px #222222;
+    border-right: solid 1px #222222;
+}
+.task-actions {
+    height: fit-content;
+}
+.task-text {
+    flex-grow: 0.9;
+}
+.task-text * {
+    margin: 4px 0px;
+}
+.task-text input {
+    display: block;
+    background-color: transparent;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    width: 100%;
+}
+.task-text .title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #FD9704;
+    border-bottom: solid 1px #555555;
+    transition-duration: 0.6s;
+}
+.task-text .title.task-complete {
+    text-decoration: line-through;
+    color: #888888;
+    font-style: italic;
+}
+.task-text .title.task-editable {
+    border-bottom: solid 1px #FD9704;
+}
+.task-text .desc {
+    color: #eeeeee;
+    border-bottom: solid 1px #555555;
+    transition-duration: 1s;
+}
+.task-text .desc.task-complete {
+    text-decoration: line-through;
+    color: #888888;
+    font-style: italic;
+}
+.task-text .desc.task-editable {
+    border-bottom: solid 1px #eeeeee;
+}
+.task-actions button {
+    border-radius: 20px;
+    background-color: #eeeeee;
+    margin-top: 5px;
+    display: block;
+}
+button#edit {
+    border: solid 1px #0a98c4;
+    color: #0a98c4;
+    font-size: 1rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: 0;
+}
+button#edit:hover {
+    background-color: #0a98c4;
+    color: #eeeeee;
+}
+button#complete {
+    border: solid 1px #90c240;
+    color: #90c240;
+    height: 1.45rem;
+    width: 1.45rem;
+    font-size: 1rem;
+    padding: 0;
+    border-radius: 15px;
+}
+button#complete:hover {
+    background-color: #90c240;
+    color: #eeeeee;
+}
+button#delete {
+    border: solid 1px #FF595E;
+    color: #FF595E;
+    background-color: #eeeeee;
+    font-size: 1rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: 0;
+}
+button#delete:hover {
+    background-color: #da4d52;
+    color: #eeeeee;
+}
+.dialog {
+    position: absolute;
+    background-color: #fd6804;
+    color: #eeeeee;
+    padding: 10px;
+    border-radius: 15px;
+    width: 30vw;
+    right: -35vw;
+    top: 30px;
+    transition-duration: 0.6s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.dialog p {
+    margin: 0;
+    max-width: 80%;
+}
+.dialog button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 1.2rem;
+    width: 1.2rem;
+    padding: 0;
+}
+.dialog-visible {
+    right: 30px;
+}
